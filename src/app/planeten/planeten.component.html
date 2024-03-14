@@ -1,0 +1,15 @@
+<h5>Hier ist: planeten.component.html</h5>
+
+<app-planet-detail [planet]="selectedPlanet"></app-planet-detail>
+
+<h2>Die Planeten</h2>
+<ul class="planeten">
+    <li *ngFor="let planet of planeten">
+        <button [class.selected]="planet === selectedPlanet" type="button" (click)="onSelect(planet)">
+            <span class="badge">{{planet.id}}</span>
+            <span class="name">{{planet.name}}</span>
+        </button>
+    </li>
+</ul>
+
+
