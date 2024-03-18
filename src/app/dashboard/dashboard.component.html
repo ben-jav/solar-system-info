@@ -1,0 +1,11 @@
+<p>Top Planeten</p>
+
+<div class="planeten-menu">
+    <a *ngFor="let planet of planeten" 
+        routerLink="/detail/{{planet.id}}"
+        >
+
+        {{planet.name}}
+
+    </a>
+</div>

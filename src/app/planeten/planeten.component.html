@@ -1,14 +1,13 @@
-<h5>Hier ist: planeten.component.html</h5>
 
-<app-planet-detail [planet]="selectedPlanet"></app-planet-detail>
+<!-- <app-planet-detail [planet]="selectedPlanet"></app-planet-detail> -->
 
-<h2>Die Planeten</h2>
+
+<h2>Hire Die Planeten component html</h2>
 <ul class="planeten">
     <li *ngFor="let planet of planeten">
-        <button [class.selected]="planet === selectedPlanet" type="button" (click)="onSelect(planet)">
-            <span class="badge">{{planet.id}}</span>
-            <span class="name">{{planet.name}}</span>
-        </button>
+        <a routerLink="/detail/{{planet.id}}">
+            <span class="badge">{{planet.id}}</span> {{planet.name}}
+        </a>
     </li>
 </ul>
 

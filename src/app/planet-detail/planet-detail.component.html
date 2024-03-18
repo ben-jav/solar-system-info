@@ -4,11 +4,13 @@
 <div *ngIf="planet">
 
     <h2>{{planet.name | uppercase}} Details</h2>
-    <div>id: {{planet.id}}</div>
-    <!-- <div><span>id: </span>{{planet.id}}</div> -->
+    <div><span>id: </span> {{planet.id}} </div>
+
     <div>
         <label for="planet-name">Planeten Name: </label>
         <input id="planet-name" [(ngModel)]="planet.name" placeholder="name">
     </div>
 
+    <button type="button" (click)="goBack()">go Back</button>
+    
 </div>

@@ -5,13 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlanetenComponent } from './planeten/planeten.component';
 import { FormsModule } from '@angular/forms';
-import { PlanetDetailComponent } from './planet-detail/planet-detail.component'; 
+import { PlanetDetailComponent } from './planet-detail/planet-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     PlanetenComponent,
-    PlanetDetailComponent
+    PlanetDetailComponent,
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

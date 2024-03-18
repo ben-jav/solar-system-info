@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Planet } from '../planet';
 import { PLANETEN } from '../solar-planeten';
 import { NgFor, NgIf, UpperCasePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PlanetService } from '../planet.service';
+import { MessageService } from '../message.service';
 
 @Component({
   // standalone: true,
@@ -18,17 +19,29 @@ import { PlanetService } from '../planet.service';
   // ],
   })
   
-  export class PlanetenComponent {
+  export class PlanetenComponent implements OnInit {
     // planeten = PLANETEN;
-    selectedPlanet?: Planet;
+    // selectedPlanet?: Planet;
 
     planeten: Planet[] = [];
-
+    
     constructor(private planetService: PlanetService) {}
-
-    onSelect(planet: Planet) : void {
-      this.selectedPlanet = planet;
+    
+    ngOnInit() : void {
+      this.getPlaneten();
     }
+
+    getPlaneten() : void {
+      this.planetService.getPlaneten()
+        .subscribe( p => this.planeten = p );
+    }
+
+
+    // onSelect(planet: Planet) : void {
+    //   this.selectedPlanet = planet;
+    //   this.messageService.add(`PlanetenComponent:
+    //                   Selected Planet id = ${planet.id}`);
+    // }
     
   }
   
