@@ -3,11 +3,12 @@
 
 <div *ngIf="planet" class="planet-details">
 
-    <h2>{{planet.name | uppercase}} Details</h2>
-    <div><span>id: </span> {{planet.id}} </div>
-
+    
     <div>
+        <h2>{{planet.name | uppercase}} Details</h2>
+        <div><span>id: </span> {{planet.id}} </div>
         <label for="planet-name">Planeten Name: </label>
+        <br>
         <input id="planet-name" [(ngModel)]="planet.name" placeholder="name">
     </div>
 

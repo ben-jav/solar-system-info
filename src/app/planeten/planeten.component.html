@@ -3,13 +3,13 @@
 
 <div class="row" >
     <div class="col" *ngFor="let p of planeten">
-        <img 
-        (mouseover)="vergroessern($event)"
-        (mouseout)="normal($event)"
-        width="70%" src="../../assets/images/{{p.image}}" alt="Planet Image">
-        <br>
-        <a routerLink="/detail/{{p.id}}">
-            <span>{{p.id}}.</span> {{p.name}}
+        <a routerLink="/detail/{{p.id}}" class="d-flex flex-column align-items-center">
+            <img 
+            (mouseover)="vergroessern($event)"
+            (mouseout)="normal($event)"
+            width="70%" src="../../assets/images/{{p.image}}" alt="Planet Image">
+            <br>
+            {{p.id}}. {{p.name}}
         </a>
     </div>
 </div>

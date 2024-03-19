@@ -6,6 +6,10 @@
   padding: 20px; /* Innenabstand des Containers */
   box-sizing: border-box;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .planet-details h2,
