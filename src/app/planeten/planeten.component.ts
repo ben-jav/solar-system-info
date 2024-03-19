@@ -36,6 +36,16 @@ import { MessageService } from '../message.service';
         .subscribe( p => this.planeten = p );
     }
 
+    vergroessern(event: MouseEvent) {
+      const element = event.target as HTMLImageElement;
+      element.style.transform = "scale(1.1)";
+    }
+  
+    normal(event: MouseEvent) {
+      const element = event.target as HTMLImageElement;
+      element.style.transform = "scale(1)";
+    }
+
 
     // onSelect(planet: Planet) : void {
     //   this.selectedPlanet = planet;

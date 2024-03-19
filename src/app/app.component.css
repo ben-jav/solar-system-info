@@ -1,6 +1,29 @@
-.backgroundfoto {
-    background-image: url(https://images.t3n.de/news/wp-content/uploads/2023/07/galaxie.jpg?class=structuredData-large);
-    width: 100vw;
+h1 {
+  color: white;
+  text-shadow: black;
+  display: flex;
+  justify-content: center;
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+nav a , h1 {
+  margin: 0 10px;
+}
+
+
+
+
+
+
+.back {
+  background-color: grey;
+  width: 100vw;
     height: 100vh;
     background-size:cover;
     background-repeat: no-repeat;
@@ -8,9 +31,21 @@
     z-index: -100;
 }
 
+.backgroundfoto {
+    background-image: url(https://www.planetarium.berlin/sites/default/files/styles/1110xauto/public/2018-07/DunklesUniversum-01.jpg?itok=hSd9AdoG);
+    width: 100vw;
+    height: 100vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    position:absolute;
+    z-index: -100;
+    
+}
+
 /* AppComponent's private CSS styles */
 h1 {
-    margin-bottom: 0;
+  margin-top: 20px;  
+  margin-bottom: 0;
   }
   nav a {
     padding: 1rem;

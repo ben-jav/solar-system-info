@@ -23,4 +23,15 @@ export class DashboardComponent implements OnInit {
       .subscribe(planeten => this.planeten = planeten.slice(1,5));
   }
 
+  vergroessern(event: MouseEvent) {
+    const element = event.target as HTMLImageElement;
+    element.style.transform = "scale(1.1)";
+  }
+
+  normal(event: MouseEvent) {
+    const element = event.target as HTMLImageElement;
+    element.style.transform = "scale(1)";
+  }
+
+
 }

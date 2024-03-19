@@ -1,14 +1,31 @@
 
-<!-- <app-planet-detail [planet]="selectedPlanet"></app-planet-detail> -->
 
 
-<h2>Hire Die Planeten component html</h2>
-<ul class="planeten">
+<div class="row" >
+    <div class="col" *ngFor="let p of planeten">
+        <img 
+        (mouseover)="vergroessern($event)"
+        (mouseout)="normal($event)"
+        width="70%" src="../../assets/images/{{p.image}}" alt="Planet Image">
+        <br>
+        <a routerLink="/detail/{{p.id}}">
+            <span>{{p.id}}.</span> {{p.name}}
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- <ul class="planeten">
     <li *ngFor="let planet of planeten">
         <a routerLink="/detail/{{planet.id}}">
             <span class="badge">{{planet.id}}</span> {{planet.name}}
         </a>
     </li>
-</ul>
+</ul> -->
 
 

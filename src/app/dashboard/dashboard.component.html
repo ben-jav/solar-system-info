@@ -5,7 +5,11 @@
         routerLink="/detail/{{planet.id}}"
         >
 
-        {{planet.name}}
+        <img 
+        (mouseover)="vergroessern($event)"
+        (mouseout)="normal($event)"
+        width="70%" src="../../assets/images/{{planet.image}}" alt="Planet Foto">
+        <br>{{planet.name}}
 
     </a>
 </div>

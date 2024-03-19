@@ -1,4 +1,34 @@
-/* PlanetDetailComponent's private CSS styles */
+
+.planet-details {
+  width: 50%; /* Breite des Containers */
+  margin: 0 auto; /* Zentriert den Container horizontal */
+  border: 1px solid wheat; /* Rahmen um den Container */
+  padding: 20px; /* Innenabstand des Containers */
+  box-sizing: border-box;
+  margin-top: 50px;
+}
+
+.planet-details h2,
+.planet-details label,
+.planet-details div {
+    color: white; /* Textfarbe außerhalb von Button, Label und Input */
+}
+
+.planet-details button {
+    background-color: #ccc; /* Hintergrundfarbe des Buttons */
+    color: black; /* Textfarbe des Buttons */
+    border: none; /* Rand des Buttons entfernen */
+    padding: 10px 20px; /* Innenabstand des Buttons */
+    cursor: pointer; /* Zeigerzeiger für den Button */
+}
+
+.planet-details button:hover {
+    background-color: #999; /* Hintergrundfarbe des Buttons beim Hovern */
+}
+
+
+
+
 label {
     color: #435960;
     font-weight: bold;
